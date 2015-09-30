@@ -1,0 +1,982 @@
+/*!
+ * Start Bootstrap - SB Admin 2 Bootstrap Admin Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    background-color: #f8f8f8;
+	
+}
+
+#wrapper {
+    width: 100%;
+}
+
+#page-wrapper {
+    padding: 0 15px;
+    min-height: 568px;
+    background-color: #fff;
+}
+.panel-heading.info{
+	height: 100px;
+}
+h1.tit{
+	float:left;
+}
+.periode{
+	float: right;
+    margin: 50px 0px 0px
+}
+.periode span{	
+	float: left;
+    margin: 5px 10px 1px 0px;
+    font-size: 19px;
+}
+.periode .bulan{
+	float:left;
+}
+.periode .tahun{
+	float:left;
+	margin: 0px 0px 0px 5px;
+}
+.navbar{
+	background:#428bca !important;
+}
+.dropdown-toggle .fa {
+	color:#fff !important;
+}
+.navbar-default .navbar-brand {
+    color: #fff;
+}
+.navbar-top-links li a:hover, .navbar-top-links li a:active{
+	background:#222;
+	color:#fff;
+}
+.panel-default>.panel-heading {
+    color: #fff;
+    background-color: #428bca !important;
+}
+/* Create Trip */
+.upload .imag{
+	margin:0px 0px 5px;
+}
+.form-horizontal .radio, .form-horizontal .checkbox {
+    min-height: 27px;
+    float: left;
+    width: 200px;
+}
+section {
+  /* used just to separate different styles */
+  border-bottom: 1px solid #e6e6e6;
+  padding: 4em 0;
+}
+section h2 {
+  width: 90%;
+  margin: 0 auto 2em;
+  color: #2c3f4c;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+@media only screen and (min-width: 1170px) {
+  section {
+    padding: 6em 0;
+  }
+  section h2 {
+    margin: 0 auto 3em;
+  }
+}
+.cd-breadcrumb li a{
+	line-height:100%;
+}
+.cd-breadcrumb li a:hover{
+	text-decoration:none;
+}
+
+/* -------------------------------- 
+
+Basic Style
+
+-------------------------------- */
+.cd-breadcrumb, .cd-multi-steps {
+  width: 90%;
+  max-width: 768px;
+  padding: 0.5em 1em;
+  margin: 1em auto;
+  background-color: #edeff0;
+  border-radius: .25em;
+}
+.cd-breadcrumb:after, .cd-multi-steps:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.cd-breadcrumb li, .cd-multi-steps li {
+  display: inline-block;
+  float: left;
+  margin: 0.5em 0;
+}
+.cd-breadcrumb li::after, .cd-multi-steps li::after {
+  /* this is the separator between items */
+  display: inline-block;
+  content: '\00bb';
+  margin: 0 .6em;
+  color: #959fa5;
+}
+.cd-breadcrumb li:last-of-type::after, .cd-multi-steps li:last-of-type::after {
+  /* hide separator after the last item */
+  display: none;
+}
+.cd-breadcrumb li > *, .cd-multi-steps li > * {
+  /* single step */
+  display: inline-block;
+  font-size: 1.4rem;
+  color: #2c3f4c;
+}
+.cd-breadcrumb li.current > *, .cd-multi-steps li.current > * {
+  /* selected step */
+  color: #96c03d;
+}
+.no-touch .cd-breadcrumb a:hover, .no-touch .cd-multi-steps a:hover {
+  /* steps already visited */
+  color: #96c03d;
+}
+.cd-breadcrumb.custom-separator li::after, .cd-multi-steps.custom-separator li::after {
+  /* replace the default arrow separator with a custom icon */
+  content: '';
+  height: 16px;
+  width: 16px;
+  background: url(../img/cd-custom-separator.svg) no-repeat center center;
+  vertical-align: middle;
+}
+.cd-breadcrumb.custom-icons li > *::before, .cd-multi-steps.custom-icons li > *::before {
+  /* add a custom icon before each item */
+  content: '';
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin-right: .4em;
+  margin-top: -2px;
+  background: url(../img/cd-custom-icons-01.svg) no-repeat 0 0;
+  vertical-align: middle;
+}
+.cd-breadcrumb.custom-icons li:not(.current):nth-of-type(2) > *::before, .cd-multi-steps.custom-icons li:not(.current):nth-of-type(2) > *::before {
+  /* change custom icon using image sprites */
+  background-position: -20px 0;
+}
+.cd-breadcrumb.custom-icons li:not(.current):nth-of-type(3) > *::before, .cd-multi-steps.custom-icons li:not(.current):nth-of-type(3) > *::before {
+  background-position: -40px 0;
+}
+.cd-breadcrumb.custom-icons li:not(.current):nth-of-type(4) > *::before, .cd-multi-steps.custom-icons li:not(.current):nth-of-type(4) > *::before {
+  background-position: -60px 0;
+}
+.cd-breadcrumb.custom-icons li.current:first-of-type > *::before, .cd-multi-steps.custom-icons li.current:first-of-type > *::before {
+  /* change custom icon for the current item */
+  background-position: 0 -20px;
+}
+.cd-breadcrumb.custom-icons li.current:nth-of-type(2) > *::before, .cd-multi-steps.custom-icons li.current:nth-of-type(2) > *::before {
+  background-position: -20px -20px;
+}
+.cd-breadcrumb.custom-icons li.current:nth-of-type(3) > *::before, .cd-multi-steps.custom-icons li.current:nth-of-type(3) > *::before {
+  background-position: -40px -20px;
+}
+.cd-breadcrumb.custom-icons li.current:nth-of-type(4) > *::before, .cd-multi-steps.custom-icons li.current:nth-of-type(4) > *::before {
+  background-position: -60px -20px;
+}
+@media only screen and (min-width: 768px) {
+  .cd-breadcrumb, .cd-multi-steps {
+    padding: 0 1.2em;
+  }
+  .cd-breadcrumb li, .cd-multi-steps li {
+    margin: 1.2em 0;
+  }
+  .cd-breadcrumb li::after, .cd-multi-steps li::after {
+    margin: 0 1em;
+  }
+  .cd-breadcrumb li > *, .cd-multi-steps li > * {
+    font-size: 1.6rem;
+  }
+}
+
+/* -------------------------------- 
+
+Triangle breadcrumb
+
+-------------------------------- */
+@media only screen and (min-width: 768px) {
+  .cd-breadcrumb.triangle {
+    /* reset basic style */
+    background-color: transparent;
+    padding: 0;
+  }
+  .cd-breadcrumb.triangle li {
+    position: relative;
+    padding: 0;
+    margin: 4px 4px 4px 0;
+  }
+  .cd-breadcrumb.triangle li:last-of-type {
+    margin-right: 0;
+  }
+  .cd-breadcrumb.triangle li > * {
+    position: relative;
+    padding: 1em .8em 1em 2.5em;
+    color: #2c3f4c;
+    background-color: #edeff0;
+    /* the border color is used to style its ::after pseudo-element */
+    border-color: #edeff0;
+  }
+  .cd-breadcrumb.triangle li.current > * {
+    /* selected step */
+    color: #ffffff;
+    background-color: #96c03d;
+    border-color: #96c03d;
+  }
+  .cd-breadcrumb.triangle li:first-of-type > * {
+    padding-left: 1.6em;
+    border-radius: .25em 0 0 .25em;
+  }
+  .cd-breadcrumb.triangle li:last-of-type > * {
+    padding-right: 1.6em;
+    border-radius: 0 .25em .25em 0;
+  }
+  .no-touch .cd-breadcrumb.triangle a:hover {
+    /* steps already visited */
+    color: #ffffff;
+    background-color: #2c3f4c;
+    border-color: #2c3f4c;
+  }
+  .cd-breadcrumb.triangle li::after, .cd-breadcrumb.triangle li > *::after {
+    /* 
+    	li > *::after is the colored triangle after each item
+    	li::after is the white separator between two items
+    */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    content: '';
+    height: 0;
+    width: 0;
+    /* 48px is the height of the <a> element */
+    border: 24px solid transparent;
+    border-right-width: 0;
+    border-left-width: 20px;
+  }
+  .cd-breadcrumb.triangle li::after {
+    /* this is the white separator between two items */
+    z-index: 1;
+    -webkit-transform: translateX(4px);
+    -moz-transform: translateX(4px);
+    -ms-transform: translateX(4px);
+    -o-transform: translateX(4px);
+    transform: translateX(4px);
+    border-left-color: #ffffff;
+    /* reset style */
+    margin: 0;
+  }
+  .cd-breadcrumb.triangle li > *::after {
+    /* this is the colored triangle after each element */
+    z-index: 2;
+    border-left-color: inherit;
+  }
+  .cd-breadcrumb.triangle li:last-of-type::after, .cd-breadcrumb.triangle li:last-of-type > *::after {
+    /* hide the triangle after the last step */
+    display: none;
+  }
+  .cd-breadcrumb.triangle.custom-separator li::after {
+    /* reset style */
+    background-image: none;
+  }
+  .cd-breadcrumb.triangle.custom-icons li::after, .cd-breadcrumb.triangle.custom-icons li > *::after {
+    /* 50px is the height of the <a> element */
+    border-top-width: 25px;
+    border-bottom-width: 25px;
+  }
+
+  @-moz-document url-prefix() {
+    .cd-breadcrumb.triangle li::after,
+    .cd-breadcrumb.triangle li > *::after {
+      /* fix a bug on Firefix - tooth edge on css triangle */
+      border-left-style: dashed;
+    }
+  }
+}
+/* -------------------------------- 
+
+Custom icons hover effects - breadcrumb and multi-steps
+
+-------------------------------- */
+@media only screen and (min-width: 768px) {
+  .no-touch .cd-breadcrumb.triangle.custom-icons li:first-of-type a:hover::before, .cd-breadcrumb.triangle.custom-icons li.current:first-of-type em::before, .no-touch .cd-multi-steps.text-center.custom-icons li:first-of-type a:hover::before, .cd-multi-steps.text-center.custom-icons li.current:first-of-type em::before {
+    /* change custom icon using image sprites - hover effect or current item */
+    background-position: 0 -40px;
+  }
+  .no-touch .cd-breadcrumb.triangle.custom-icons li:nth-of-type(2) a:hover::before, .cd-breadcrumb.triangle.custom-icons li.current:nth-of-type(2) em::before, .no-touch .cd-multi-steps.text-center.custom-icons li:nth-of-type(2) a:hover::before, .cd-multi-steps.text-center.custom-icons li.current:nth-of-type(2) em::before {
+    background-position: -20px -40px;
+  }
+  .no-touch .cd-breadcrumb.triangle.custom-icons li:nth-of-type(3) a:hover::before, .cd-breadcrumb.triangle.custom-icons li.current:nth-of-type(3) em::before, .no-touch .cd-multi-steps.text-center.custom-icons li:nth-of-type(3) a:hover::before, .cd-multi-steps.text-center.custom-icons li.current:nth-of-type(3) em::before {
+    background-position: -40px -40px;
+  }
+  .no-touch .cd-breadcrumb.triangle.custom-icons li:nth-of-type(4) a:hover::before, .cd-breadcrumb.triangle.custom-icons li.current:nth-of-type(4) em::before, .no-touch .cd-multi-steps.text-center.custom-icons li:nth-of-type(4) a:hover::before, .cd-multi-steps.text-center.custom-icons li.current:nth-of-type(4) em::before {
+    background-position: -60px -40px;
+  }
+}
+/* -------------------------------- 
+
+Multi steps indicator 
+
+-------------------------------- */
+@media only screen and (min-width: 768px) {
+  .cd-multi-steps {
+    /* reset style */
+    background-color: transparent;
+    padding: 0;
+    text-align: center;
+  }
+
+  .cd-multi-steps li {
+    position: relative;
+    float: none;
+    margin: 0.4em 40px 0.4em 0;
+  }
+  .cd-multi-steps li:last-of-type {
+    margin-right: 0;
+  }
+  .cd-multi-steps li::after {
+    /* this is the line connecting 2 adjacent items */
+    position: absolute;
+    content: '';
+    height: 4px;
+    background: #edeff0;
+    /* reset style */
+    margin: 0;
+  }
+  .cd-multi-steps li.visited::after {
+    background-color: #96c03d;
+  }
+  .cd-multi-steps li > *, .cd-multi-steps li.current > * {
+    position: relative;
+    color: #2c3f4c;
+  }
+
+  .cd-multi-steps.custom-separator li::after {
+    /* reset style */
+    height: 4px;
+    background: #edeff0;
+  }
+
+  .cd-multi-steps.text-center li::after {
+    width: 100%;
+    top: 50%;
+    left: 100%;
+    -webkit-transform: translateY(-50%) translateX(-1px);
+    -moz-transform: translateY(-50%) translateX(-1px);
+    -ms-transform: translateY(-50%) translateX(-1px);
+    -o-transform: translateY(-50%) translateX(-1px);
+    transform: translateY(-50%) translateX(-1px);
+  }
+  .cd-multi-steps.text-center li > * {
+    z-index: 1;
+    padding: .6em 1em;
+    border-radius: .25em;
+    background-color: #edeff0;
+  }
+  .no-touch .cd-multi-steps.text-center a:hover {
+    background-color: #2c3f4c;
+  }
+  .cd-multi-steps.text-center li.current > *, .cd-multi-steps.text-center li.visited > * {
+    color: #ffffff;
+    background-color: #96c03d;
+  }
+  .cd-multi-steps.text-center.custom-icons li.visited a::before {
+    /* change the custom icon for the visited item - check icon */
+    background-position: 0 -60px;
+  }
+
+  .cd-multi-steps.text-top li, .cd-multi-steps.text-bottom li {
+    width: 80px;
+    text-align: center;
+  }
+  .cd-multi-steps.text-top li::after, .cd-multi-steps.text-bottom li::after {
+    /* this is the line connecting 2 adjacent items */
+    position: absolute;
+    left: 50%;
+    /* 40px is the <li> right margin value */
+    width: calc(100% + 40px);
+  }
+  .cd-multi-steps.text-top li > *::before, .cd-multi-steps.text-bottom li > *::before {
+    /* this is the spot indicator */
+    content: '';
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #edeff0;
+  }
+  .cd-multi-steps.text-top li.visited > *::before,
+  .cd-multi-steps.text-top li.current > *::before, .cd-multi-steps.text-bottom li.visited > *::before,
+  .cd-multi-steps.text-bottom li.current > *::before {
+    background-color: #96c03d;
+  }
+  .no-touch .cd-multi-steps.text-top a:hover, .no-touch .cd-multi-steps.text-bottom a:hover {
+    color: #96c03d;
+  }
+  .no-touch .cd-multi-steps.text-top a:hover::before, .no-touch .cd-multi-steps.text-bottom a:hover::before {
+    box-shadow: 0 0 0 3px rgba(150, 192, 61, 0.3);
+  }
+
+  .cd-multi-steps.text-top li::after {
+    /* this is the line connecting 2 adjacent items */
+    bottom: 4px;
+  }
+  .cd-multi-steps.text-top li > * {
+    padding-bottom: 20px;
+  }
+  .cd-multi-steps.text-top li > *::before {
+    /* this is the spot indicator */
+    bottom: 0;
+  }
+
+  .cd-multi-steps.text-bottom li::after {
+    /* this is the line connecting 2 adjacent items */
+    top: 3px;
+  }
+  .cd-multi-steps.text-bottom li > * {
+    padding-top: 20px;
+  }
+  .cd-multi-steps.text-bottom li > *::before {
+    /* this is the spot indicator */
+    top: 0;
+  }
+}
+/* -------------------------------- 
+
+Add a counter to the multi-steps indicator 
+
+-------------------------------- */
+.cd-multi-steps.count li {
+  counter-increment: steps;
+}
+
+.cd-multi-steps.count li > *::before {
+  content: counter(steps) " - ";
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-multi-steps.text-top.count li > *::before,
+  .cd-multi-steps.text-bottom.count li > *::before {
+    /* this is the spot indicator */
+    content: counter(steps);
+    height: 26px;
+    width: 26px;
+    line-height: 26px;
+    font-size: 1.4rem;
+    color: #ffffff;
+  }
+
+  .cd-multi-steps.text-top.count li:not(.current) em::before,
+  .cd-multi-steps.text-bottom.count li:not(.current) em::before {
+    /* steps not visited yet - counter color */
+    color: #2c3f4c;
+  }
+
+  .cd-multi-steps.text-top.count li::after {
+    bottom: 11px;
+  }
+
+  .cd-multi-steps.text-top.count li > * {
+    padding-bottom: 34px;
+  }
+
+  .cd-multi-steps.text-bottom.count li::after {
+    top: 11px;
+  }
+
+  .cd-multi-steps.text-bottom.count li > * {
+    padding-top: 34px;
+  }
+}
+
+
+
+/* HOT TRIP */
+.hottrip{
+	padding: 25px 0px 0px;
+}
+
+.plantrip.trip .itemstrip{
+	width: 400px;
+	height: 400px;
+	margin: 0px 5px 30px;
+}
+.plantrip.trip .itemstrip .top .tombol a {
+	width: 120px;
+}
+.trip .itemstrip{
+	width: 425px;
+	float: left;
+	margin: 7px 25px 0px 0px;
+    height: 356px;
+}
+.trip .itemstrip .top{
+	border: 1px solid #fff;
+	height: 350px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 7px #000;
+	position:relative;
+	margin: 0px 0px 5px 0px;
+	background:#ccc;
+}
+.kota img{
+	float:left;
+}
+.trip .itemstrip .top .label{
+	position: absolute;
+	right: -9px;
+	top: -5px;
+	background: url(../images/bluelabel.png);
+	width: 120px;
+	height: 125px;
+	z-index: 100;
+	background-size: 100%;
+	font-size: 27px;
+	white-space: normal;
+	line-height: 109%;
+	padding: 15px 0px 0px 20px;
+	font-weight: 100;
+	opacity:0.9
+}
+.trip .itemstrip .top .label.offer{
+	background: url(../images/offer.png);
+	width: 120px;
+	background-size: 100%;
+	height: 130px;
+	top: -9px;
+}
+.trip .favorite{
+	color: #fff;
+	text-shadow: 0px 0px 5px #222;
+	text-align: center;
+	margin: -15px 0px 0px;
+}
+.trip .itemstrip .top .date{
+	position: absolute;
+	z-index: 100;
+	background: #66ca85;
+	width: 134px;
+	height: 104px;
+	padding: 17px 0px 0px 11px;
+	color: #fff;
+	opacity:0.9;
+}
+.trip .itemstrip .top .date .tgl{
+	font-size: 49px;
+	font-weight: bold;
+	margin: -17px 0px 0px;
+}
+.trip .itemstrip .top .date .month{
+	margin: -20px 0px 0px 4px;
+}
+.trip .itemstrip .top .date .month p{
+	margin:0px;
+}
+.trip .itemstrip .top .date .lama{
+	margin: -5px 0px 0px 2px;
+}
+.trip .itemstrip .top .imag{
+	height:280px;
+	overflow:hidden;
+}
+.trip .itemstrip .top .imag img{
+	max-width:none;
+	height:280px;
+}
+.trip .itemstrip .top .info{
+	position: absolute;
+	z-index: 10;
+	top: 130px;
+	left: 15px;
+	color: #fff;
+	width:90%;
+}
+.trip .itemstrip .top .info .title{
+	text-shadow: 0px 0px 5px #222;
+	margin-top: -20px;
+    margin-bottom: 10px;
+}
+.trip .itemstrip .top .info .harga{
+	text-align: right;
+	font-size: 22px;
+	font-weight: 100;
+	text-shadow: 0px 0px 10px #000;
+}
+.trip .itemstrip .top .info .harga .jum{
+	font-size:55px;
+}
+.trip .itemstrip .top .tombol{
+	margin: 7px 15px;
+}
+.trip .itemstrip .top .tombol a{
+	width: 234px;
+    font-size: 14px;
+}
+.trip .itemstrip .top .tombol a span{
+	font-size: 24px;
+}
+.trip .itemstrip .bottom{
+	border: 1px solid #fff;
+	height: 55px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 7px #000;
+	overflow: hidden;
+	background:#1e6aa7 !important;
+	position:relative;
+	color: #fff;
+	padding: 15px 0px 0px 58px;
+	font-size:14px;
+}
+.trip .itemstrip .bottom .hexagon{
+	width: 40px;
+	left: 12px;
+	height: 55px;
+	top: 0px;
+}
+
+/*trip HOT*/
+
+@media(min-width:768px) {
+    #page-wrapper {
+        position: inherit;
+        margin: 0 0 0 250px;
+        padding: 0 30px;
+        border-left: 1px solid #e7e7e7;
+    }
+}
+
+.navbar-top-links li {
+    display: inline-block;
+}
+
+.navbar-top-links li:last-child {
+    margin-right: 15px;
+}
+
+.navbar-top-links li a {
+    padding: 15px;
+    min-height: 50px;
+}
+
+.navbar-top-links .dropdown-menu li {
+    display: block;
+}
+
+.navbar-top-links .dropdown-menu li:last-child {
+    margin-right: 0;
+}
+
+.navbar-top-links .dropdown-menu li a {
+    padding: 3px 20px;
+    min-height: 0;
+}
+
+.navbar-top-links .dropdown-menu li a div {
+    white-space: normal;
+}
+
+.navbar-top-links .dropdown-messages,
+.navbar-top-links .dropdown-tasks,
+.navbar-top-links .dropdown-alerts {
+    width: 310px;
+    min-width: 0;
+}
+
+.navbar-top-links .dropdown-messages {
+    margin-left: 5px;
+}
+
+.navbar-top-links .dropdown-tasks {
+    margin-left: -59px;
+}
+
+.navbar-top-links .dropdown-alerts {
+    margin-left: -123px;
+}
+
+.navbar-top-links .dropdown-user {
+    right: 0;
+    left: auto;
+}
+
+.sidebar .sidebar-nav.navbar-collapse {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.sidebar .sidebar-search {
+    padding: 15px;
+}
+
+.sidebar ul li {
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.sidebar ul li a.active {
+    background-color: #eee;
+}
+
+.sidebar .arrow {
+    float: right;
+}
+
+.sidebar .fa.arrow:before {
+    content: "\f104";
+}
+
+.sidebar .active>a>.fa.arrow:before {
+    content: "\f107";
+}
+
+.sidebar .nav-second-level li,
+.sidebar .nav-third-level li {
+    border-bottom: 0!important;
+}
+
+.sidebar .nav-second-level li a {
+    padding-left: 37px;
+}
+
+.sidebar .nav-third-level li a {
+    padding-left: 52px;
+}
+
+@media(min-width:768px) {
+    .sidebar {
+        z-index: 1;
+        position: absolute;
+        width: 250px;
+        margin-top: 51px;
+    }
+
+    .navbar-top-links .dropdown-messages,
+    .navbar-top-links .dropdown-tasks,
+    .navbar-top-links .dropdown-alerts {
+        margin-left: auto;
+    }
+}
+
+.btn-outline {
+    color: inherit;
+    background-color: transparent;
+    transition: all .5s;
+}
+
+.btn-primary.btn-outline {
+    color: #428bca;
+}
+
+.btn-success.btn-outline {
+    color: #5cb85c;
+}
+
+.btn-info.btn-outline {
+    color: #5bc0de;
+}
+
+.btn-warning.btn-outline {
+    color: #f0ad4e;
+}
+
+.btn-danger.btn-outline {
+    color: #d9534f;
+}
+
+.btn-primary.btn-outline:hover,
+.btn-success.btn-outline:hover,
+.btn-info.btn-outline:hover,
+.btn-warning.btn-outline:hover,
+.btn-danger.btn-outline:hover {
+    color: #fff;
+}
+
+.chat {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.chat li {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #999;
+}
+
+.chat li.left .chat-body {
+    margin-left: 60px;
+}
+
+.chat li.right .chat-body {
+    margin-right: 60px;
+}
+
+.chat li .chat-body p {
+    margin: 0;
+}
+
+.panel .slidedown .glyphicon,
+.chat .glyphicon {
+    margin-right: 5px;
+}
+
+.chat-panel .panel-body {
+    height: 350px;
+    overflow-y: scroll;
+}
+
+.login-panel {
+    margin-top: 25%;
+}
+
+.flot-chart {
+    display: block;
+    height: 400px;
+}
+
+.flot-chart-content {
+    width: 100%;
+    height: 100%;
+}
+
+table.dataTable thead .sorting,
+table.dataTable thead .sorting_asc,
+table.dataTable thead .sorting_desc,
+table.dataTable thead .sorting_asc_disabled,
+table.dataTable thead .sorting_desc_disabled {
+    background: 0 0;
+}
+
+table.dataTable thead .sorting_asc:after {
+    content: "\f0de";
+    float: right;
+    font-family: fontawesome;
+}
+
+table.dataTable thead .sorting_desc:after {
+    content: "\f0dd";
+    float: right;
+    font-family: fontawesome;
+}
+
+table.dataTable thead .sorting:after {
+    content: "\f0dc";
+    float: right;
+    font-family: fontawesome;
+    color: rgba(50,50,50,.5);
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.428571429;
+}
+
+.btn-circle.btn-lg {
+    width: 50px;
+    height: 50px;
+    padding: 10px 16px;
+    border-radius: 25px;
+    font-size: 18px;
+    line-height: 1.33;
+}
+
+.btn-circle.btn-xl {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 24px;
+    line-height: 1.33;
+}
+
+.show-grid [class^=col-] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #ddd;
+    background-color: #eee!important;
+}
+
+.show-grid {
+    margin: 15px 0;
+}
+
+.huge {
+    font-size: 28px;
+    margin: 18px 0px 0px;
+	text-align:center;
+}
+
+.panel-green {
+    border-color: #5cb85c;
+}
+
+.panel-green .panel-heading {
+    border-color: #5cb85c;
+    color: #fff;
+    background-color: #5cb85c;
+}
+
+.panel-green a {
+    color: #5cb85c;
+}
+
+.panel-green a:hover {
+    color: #3d8b3d;
+}
+
+.panel-red {
+    border-color: #d9534f;
+}
+
+.panel-red .panel-heading {
+    border-color: #d9534f;
+    color: #fff;
+    background-color: #d9534f;
+}
+
+.panel-red a {
+    color: #d9534f;
+}
+
+.panel-red a:hover {
+    color: #b52b27;
+}
+
+.panel-yellow {
+    border-color: #f0ad4e;
+}
+
+.panel-yellow .panel-heading {
+    border-color: #f0ad4e;
+    color: #fff;
+    background-color: #f0ad4e;
+}
+
+.panel-yellow a {
+    color: #f0ad4e;
+}
+
+.panel-yellow a:hover {
+    color: #df8a13;
+}

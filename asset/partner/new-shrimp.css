@@ -1,0 +1,935 @@
+/* RESET */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul, ul li {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+button {
+	border: none;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+/* general setting */
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.clear {
+	clear: both;
+	float: none;
+}
+.clear:after {
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+*, *:before, *:after {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+
+/* inline element */
+
+.inline {
+	font-size: 0;
+	width: 100%;
+}
+.inline > * {
+	display: inline-block;
+	vertical-align: top;
+}
+.inline:after {
+    content: "";
+    display: inline-block;
+    width: 100%;	
+}
+.inline.right {
+	text-align: right;
+}
+.inline.left {
+	text-align: left;
+}
+.inline.center {
+	text-align: center;
+}
+.inline.justify {
+    text-align: justify;    
+}
+
+
+/* vertical align */
+.vat, .vat > * {
+	vertical-align: middle;
+}
+.vam, .vam > * {
+	vertical-align: middle;
+}
+.vab, .vab > * {
+	vertical-align: baseline;
+}
+
+/* vertically and horizontally centered */
+
+.absolute.center {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+	margin: auto;
+    position: absolute;
+}
+/* text align */
+.aligncenter:not(body), .aligncenter:not(body) * {
+	text-align: center;
+}
+img.aligncenter {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+
+
+.alignleft:not(body), .alignleft:not(body) * {
+	text-align: left;
+}
+.alignright:not(body), .alignright:not(body) * {
+	text-align: right;
+}
+.alignjustify:not(body), .alignjustify:not(body) * {
+	text-align: justify;
+}
+
+
+
+/* CONTAINER */
+
+.container {
+	width: 100%;
+	display: block;
+}
+.container, 
+.container:before, 
+.container:after {
+	clear: both;
+}
+.merge.down.container {
+    overflow: visible;
+    position: absolute;
+    z-index: 9999;
+}
+.inner {
+	margin: 0 auto;
+
+}
+.full.container .inner {
+	max-width: 100%!important;
+}
+
+/* container padding */
+.smallpadding {
+	padding: 15px 0;
+}
+.normalpadding {
+	padding: 30px 0;
+}
+.largepadding {
+	padding: 45px 0;
+}
+.bigpadding {
+	padding: 60px 0;
+}
+.hugepadding {
+	padding: 75px 0;
+}
+
+/* LAYOUT */
+.global {
+	margin: 0 auto;
+	width: 100%;
+}
+body.boxed .global {
+	box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+}
+body.boxed .global,
+body.full .container > .inner,
+body.boxed .fixedtop,
+body.full .fixedtop .inner {
+	max-width: 800px;
+}
+body.full .fixedtop {
+	max-width: 100%;
+}
+body.full.navleft:not(.overlay) .fixedtop.active,
+body.full.navright:not(.overlay) .fixedtop.active {
+	max-width: calc(100% - 250px);
+}
+body.full.navleft.panel:not(.active) .fixedtop.active,
+body.full.navright.panel:not(.active) .fixedtop.active {
+	max-width: 100%;
+}
+
+/* layout align */
+body.alignleft .global,
+body.alignleft .inner {
+	margin: 0 auto 0 0;
+}
+body.alignright .global,
+body.alignright .inner {
+	margin: 0 0 0 auto;
+}
+
+/* navigation */
+
+/* fixed left & right */
+body.navleft #navbar, 
+body.navright #navbar {
+	width: 250px;
+	height: 100%;
+	overflow: visible;
+	position: fixed;
+	top: 0;
+}
+body.navleft #navbar,
+body.navleft.panel.active #navbar {
+	left: 0;
+	margin-left: 0;
+}
+body.navright #navbar,
+body.navright.panel.active #navbar  {
+	right: 0;
+	margin-right: 0;
+}
+body.navleft {
+	padding-left: 250px;
+}
+body.navright {
+	padding-right: 250px;
+}
+.fixedtop.active {
+	position: fixed;
+	top: 0;
+}
+
+/* panel */
+body.panel, 
+body.panel #navbar,
+.panel #navbar > * {
+	transition: all 0.3s;
+}
+/* body */
+body.panel {
+	padding: 0;
+	margin: 0;
+}
+body.navleft.panel.sidetrigger {
+	padding-left: 50px;
+}
+body.navright.panel.sidetrigger {
+	padding-right: 50px;
+}
+
+/*navbar*/
+
+.panel:not(.active) #navbar > * {
+	opacity: 0;
+}
+.panel.active #navbar > * {
+	opacity: 1;
+}
+body.navleft.panel #navbar {
+	margin-left: -250px;
+}
+body.navright.panel #navbar {
+	margin-right: -250px;
+}
+body.navleft.sidetrigger.panel:not(.active) #navbar {
+	margin-left: calc(-250px + 50px);
+}
+body.navright.sidetrigger.panel:not(.active) #navbar {
+	margin-right: calc(-250px + 50px);
+}
+
+/* active panel */
+body.panel.active.navleft:not(.overlay) {
+	padding-left: 250px;
+}
+body.panel.active.navright:not(.overlay) {
+	padding-right: 250px;
+}
+body.push.panel.active.navleft {
+	margin-right: -250px;
+}
+body.push.panel.active.navright {
+	margin-left: -250px;
+}
+
+/* panel trigger */
+
+/* simple trigger */
+#paneltrigger {
+    cursor: pointer;
+    font-size: 2rem;
+    transition: all 0.3s;
+    display: none;
+}
+body.panel #paneltrigger {
+	display: block;
+}
+
+body.navleft.panel #paneltrigger {
+	margin-right: 15px;
+}
+body.navright.panel #paneltrigger {
+	margin-left: 15px;
+}
+/* sidetrigger */
+body.sidetrigger.panel #paneltrigger {
+    background: none repeat scroll 0 0 #fff;
+    height: 100%;
+    padding: 15px;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 50px;
+    z-index: 1;
+}
+body.sidetrigger.panel #paneltrigger.active {
+	z-index: 0;
+	opacity: 0;
+}
+body.navright.sidetrigger.panel #paneltrigger {
+	right: 0;
+}
+body.navleft.sidetrigger.panel #paneltrigger {
+	left: 0;
+}
+
+/** mobile **/
+@media (max-width: 768px) {
+
+	/** reset padding **/
+	body {
+		padding: 0!important;
+	}
+	#navbar, #content, #sidebar {
+		position: relative!important;
+		width: 100%!important;
+		margin: 0!important;
+	}
+	#navbar {
+		box-shadow: none!important;
+	}
+	#navbar > * {
+		opacity: 1!important;
+	}
+	body.sidetrigger.panel #paneltrigger {
+		display: none!important;
+	}
+}
+
+/* MENU */
+
+/* orientation */
+
+/* menu wrapper */
+/****************/
+.menu, .menu * {
+}
+/* sub menu */
+.submenu {
+    display: none;
+    position: absolute;
+}
+.menuitem:hover > .submenu {
+	/* display: block; */
+}
+/* sub menu of sub menu */
+.submenu > .menuitem > .submenu  {
+    left: 100%;
+    top: -1px;
+    z-index: 1;
+}
+
+/* menu item */
+/****************/
+.menuitem {
+	position: relative;
+	cursor: pointer;
+}
+/* menu item of root menu */
+.menu > .menuitem {
+    display: inline-block;
+    vertical-align: top;
+}
+/* menu item of sub menu */
+.submenu > .menuitem {
+	display: block;
+	width: 100%;
+}
+/* menu item link */
+.menu > .menuitem > *:first-child {
+	display: block;
+}
+.submenu > .menuitem > *:first-child {
+    display: block;
+    width: 100%;
+}
+/* menuitem haschild */
+.menu:not(.mega) .submenu .menuitem.haschild > *:first-child:after {
+	font-family: FontAwesome;
+	content: "\f107";
+	opacity: 0.5;
+	float: right;
+	padding: 0 0 0 0.5em;
+}
+/* menu item hover state */
+/* divider */
+.submenu > .divider {
+	border-bottom: 1px solid #eee;
+}
+
+/* drop left */
+/****************/
+.dropleft.menu > .menuitem > .submenu {
+	right: 0;
+}
+.dropleft.menu .submenu > .menuitem > .submenu  {
+    right: 100%;
+    left: auto;
+}
+
+
+.vertical.menu {
+
+}
+body.navleft #navbar .menu .submenu,
+.vertical.menu .submenu {
+    left: 100%;
+    right: auto;
+    top: -1px;
+}
+/* menu item of root menu */
+body[class*=nav]:not([class*=top]) #navbar .menu > .menuitem,
+.vertical.menu > .menuitem {
+    display: block;
+    vertical-align: top;
+}
+
+/* vertical drop left */
+/****************/
+body.navright #navbar .menu .submenu,
+.vertical.dropleft.menu .submenu {
+	right: 100%;
+	left: auto;
+	top: -1px;
+}
+
+
+/* style */
+
+/* mega menu */
+
+.mega.menu {
+
+}
+
+.mega.menu > .menuitem > .submenu {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    width: 500px;
+}
+.mega.menu > .menuitem:hover .submenu {
+    left: auto;
+    top: auto;
+    display: block;
+}
+.mega.menu > .menuitem > .submenu > .menuitem {
+    display: inline-block;
+    float: left;
+    width: calc(100% / 3);
+}
+
+.mega.menu > .menuitem > .submenu .submenu {
+    left: auto!important;
+    right: auto!important;
+    top: auto!important;
+    position: relative;
+    display: block;
+}
+/**************************/
+/***** grid *****/
+/**************************/
+
+.grid, .row {
+    display: block;
+    width: 100%;
+    padding: 0!important;
+    clear: both;
+}
+.grid:after, .row:after {
+	clear: both;
+	visibility: hidden;
+	height: 0;
+}
+.row > .column {
+	float: left;
+	vertical-align: top;
+}
+
+/**************************/
+/***** column *****/
+/**************************/
+
+/* full wide column */
+
+.row > .column {
+	width: calc(100%);
+}
+
+/* 1/2 wide column */
+.grid.two.column > .row > .column,
+.row.two.column > .column,
+.row > .half.column, 
+.row > .two.fourth.column,
+.row > .three.sixth.column,
+.row > .four.eighth.column,
+.row > .five.tenth.column,
+.row > .six.twelfth.column {
+	width: calc(100%/2);
+}
+
+/* 1/3 wide column */
+.grid.three.column > .row > .column,
+.row.three.column > .column,
+.row > .one.third.column,
+.row > .two.sixth.column,
+.row > .three.nineth.column,
+.row > .four.twelfth.column  {
+	width: calc(100%/3);
+}
+
+
+/* 2/3 wide column */
+.row > .two.third.column,
+.row > .four.sixth.column,
+.row > .six.nineth.column,
+.row > .eight.twelfth.column  {
+	width: calc( (100%*2)/3);
+}
+
+/* 1/4 wide column */
+.grid.four.column > .row > .column,
+.row.four.column > .column,
+.row > .one.fourth.column,
+.row > .two.eighth.column,
+.row > .three.twelfth.column {
+	width: calc(100%/4);
+}
+
+/* 3/4 wide column */
+.row > .three.fourth.column,
+.row > .six.eighth.column,
+.row > .nine.twelfth.column {
+	width: calc( (100%*3)/4);
+}
+
+/* 1/5 wide column */
+.grid.five.column > .row > .column,
+.row.five.column > .column,
+.row > .one.fifth.column,
+.row > .two.tenth.column {
+	width: calc(100%/5);
+}
+
+/* 2/5 wide column */
+.row > .two.fifth.column,
+.row > .four.tenth.column {
+	width: calc( (100%*2)/5);
+}
+
+/* 3/5 wide column */
+.row > .three.fifth.column,
+.row > .six.tenth.column {
+	width: calc( (100%*3)/5);
+}
+
+/* 4/5 wide column */
+.row > .four.fifth.column,
+.row > .eight.tenth.column {
+	width: calc( (100%*4)/5);
+}
+
+/* 1/6 wide column */
+.grid.six.column > .row > .column,
+.row.six.column > .column,
+.row > .one.sixth.column,
+.row > .two.twelfth.column {
+	width: calc(100%/6);
+}
+/* 5/6 wide column */
+.row > .five.sixth.column,
+.row > .ten.twelfth.column {
+	width: calc((100%*5)/6);
+}
+
+/* 1/7 wide column */
+
+.grid.seven.column > .row > .column,
+.row.seven.column > .column,
+.row > .one.seventh.column {
+	width: calc(100%/7);
+}
+
+/* 2/7 wide column */
+
+.row > .two.seventh.column {
+	width: calc((100%*2)/7);
+}
+/* 3/7 wide column */
+
+.row > .three.seventh.column {
+	width: calc((100%*3)/7);
+}
+
+/* 4/7 wide column */
+
+.row > .four.seventh.column {
+	width: calc((100%*4)/7);
+}
+
+/* 5/7 wide column */
+
+.row > .five.seventh.column {
+	width: calc((100%*5)/7);
+}
+
+/* 6/7 wide column */
+
+.row > .six.seventh.column {
+	width: calc((100%*6)/7);
+}
+
+/* 1/8 wide column */
+.grid.eight.column > .row > .column,
+.row.eight.column > .column,
+.row > .one.eighth.column {
+	width: calc(100%/8);
+}
+
+/* 3/8 wide column */
+
+.row > .three.eighth.column {
+	width: calc((100%*3)/8);
+}
+
+/* 5/8 wide column */
+
+.row > .five.eighth.column {
+	width: calc((100%*5)/8);
+}
+
+/* 7/8 wide column */
+
+.row > .seven.eighth.column {
+	width: calc((100%*7)/8);
+}
+
+/* 1/9 wide column */
+.grid.nine.column > .row > .column,
+.row.nine.column > .column,
+.row > .one.nineth.column {
+	width: calc(100%/9);
+}
+
+/* 2/9 wide column */
+
+.row > .two.nineth.column {
+	width: calc((100%*2)/9);
+}
+
+/* 4/9 wide column */
+
+.row > .four.nineth.column {
+	width: calc((100%*4)/9);
+}
+
+/* 5/9 wide column */
+
+.row > .five.nineth.column {
+	width: calc((100%*5)/9);
+}
+
+/* 7/9 wide column */
+
+.row > .seven.nineth.column {
+	width: calc((100%*7)/9);
+}
+
+/* 8/9 wide column */
+
+.row > .eight.nineth.column {
+	width: calc((100%*8)/9);
+}
+
+/* 1/10 wide column */
+.grid.ten.column > .row > .column,
+.row.ten.column > .column,
+.row > .one.tenth.column {
+	width: calc(100%/10);
+}
+
+/* 3/10 wide column */
+
+.row > .three.tenth.column {
+	width: calc((100%*3)/10);
+}
+
+/* 7/10 wide column */
+
+.row > .seven.tenth.column {
+	width: calc((100%*7)/10);
+}
+
+/* 9/10 wide column */
+
+.row > .nine.tenth.column {
+	width: calc((100%*9)/10);
+}
+
+/* 1/11 wide column */
+.grid.eleven.column > .row > .column,
+.row.eleven.column > .column,
+.row > .one.eleventh.column {
+	width: calc(100%/11);
+}
+
+/* 2/11 wide column */
+
+.row > .two.eleventh.column {
+	width: calc((100%*2)/11);
+}
+
+/* 3/11 wide column */
+
+.row > .three.eleventh.column {
+	width: calc((100%*3)/11);
+}
+
+/* 4/11 wide column */
+
+.row > .four.eleventh.column {
+	width: calc((100%*4)/11);
+}
+
+/* 5/11 wide column */
+
+.row > .five.eleventh.column {
+	width: calc((100%*5)/11);
+}
+
+/* 6/11 wide column */
+
+.row > .six.eleventh.column {
+	width: calc((100%*6)/11);
+}
+
+/* 7/11 wide column */
+
+.row > .seven.eleventh.column {
+	width: calc((100%*7)/11);
+}
+
+/* 8/11 wide column */
+
+.row > .eight.eleventh.column {
+	width: calc((100%*8)/11);
+}
+
+/* 9/11 wide column */
+
+.row > .nine.eleventh.column {
+	width: calc((100%*9)/11);
+}
+
+/* 10/11 wide column */
+
+.row > .ten.eleventh.column {
+	width: calc((100%*10)/11);
+}
+
+/* 1/12 column */
+.grid.twelve.column > .row > .column,
+.row.twelve.column > .column,
+.row > .one.twelfth.column {
+	width: calc(100%/12);
+}
+
+/* 5/12 column */
+
+.row > .five.twelfth.column {
+	width: calc((100%*5)/12);
+}
+
+/* 7/12 column */
+
+.row > .seven.twelfth.column {
+	width: calc((100%*7)/12);
+}
+
+/* 11/12 column */
+
+.row > .eleven.twelfth.column {
+	width: calc((100%*11)/12);
+}
+
+
+@media only screen 
+and (max-width : 1000px) {
+
+	/* simple grid */
+	
+	.grid.four.column > .row > .column, 
+	.grid.eight.column > .row > .column, 
+	.grid.twelve.column > .row > .column,
+	.row.four.column > .column, 
+	.row.eight.column > .column, 
+	.row.twelve.column > .column {
+		width: calc(100%/4);
+	}
+	
+	.grid.five.column > .row > .column, 
+	.grid.ten.column > .row > .column,
+	.row.five.column > .column, 
+	.row.ten.column > .column  {
+		width: calc(100%/5);
+	}
+	.grid.three.column > .row > .column, 
+	.grid.six.column > .row > .column, 
+	.grid.nine.column > .row > .column,
+	.row.three.column > .column, 
+	.row.six.column > .column, 
+	.row.nine.column > .column {
+		width: calc(100%/3);
+	}
+	.grid.seven.column > .row > .column,
+	.row.seven.column > .column {
+		width: calc(100%/7);
+	}
+}
+
+
+@media only screen 
+and (min-width : 601px)
+and (max-width : 800px) {
+	
+	/*simple grid */
+	.row.column:not(.one) > .column {
+		width: calc(100%/2);
+	}
+	.grid.one.column > .row > .column,
+	.row.one.column > .column  {
+		width: 100%!important;
+	}
+
+			
+}
+
+@media only screen 
+and (max-width : 600px) {
+	.row > .column {
+		width: 100%!important;
+	}	
+}
